@@ -484,3 +484,18 @@ supports JDBC.
 --
 Atri Sharma
 atri.jiit@gmail.com
+
+
+
+Addendum by TyrfingMjolnir, as well as replacing jdbc_fdw with jdbc2_fdw, as well as changing Make to make; including Install to install
+---
+service, connect_timeout, dbname, host, hostaddr, port, application_name, keepalives, keepalives_idle, keepalives_interval, keepalives_count, sslmode, sslcompression, sslcert, sslkey, sslrootcert, sslcrl, requirepeer, krbsrvname, drivername, url, querytimeout, jarfile, maxheapsize, use_remote_estimate, fdw_startup_cost, fdw_tuple_cost, updatable
+
+CREATE SERVER jdbc_FM11SAServerSample FOREIGN DATA WRAPPER jdbc2_fdw OPTIONS(
+  drivername 'com.filemaker.jdbc.Driver',
+  url 'jdbc:filemaker://127.0.0.1/FMServer_Sample.fp7',
+  querytimeout '15',
+  jarfile '/usr/lib/postgresql/9.4/lib/fmjdbc.jar',
+  maxheapsize '600'
+);
+---
