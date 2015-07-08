@@ -498,4 +498,10 @@ CREATE SERVER jdbc_FM11SAServerSample FOREIGN DATA WRAPPER jdbc2_fdw OPTIONS(
   jarfile '/usr/lib/postgresql/9.4/lib/fmjdbc.jar',
   maxheapsize '600'
 );
+
+CREATE USER MAPPING FOR postgres SERVER jdbc_FM11SAServerSample OPTIONS( username 'test', password 'test' );
+
+CREATE FOREIGN TABLE test313( a int ) SERVER jdbc_FM11SAServerSample OPTIONS( query 'select generate_series( 1, 1000000 )' );
+
+SELECT * FROM test313;
 ---
