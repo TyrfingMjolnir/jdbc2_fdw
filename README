@@ -487,7 +487,7 @@ atri.jiit@gmail.com
 
 
 
-Addendum by TyrfingMjolnir, as well as replacing jdbc_fdw with jdbc2_fdw, as well as changing Make to make; including Install to install
+Addendum by TyrfingMjolnir, as well as replacing jdbc_fdw with jdbc2_fdw+++
 ---
 service, connect_timeout, dbname, host, hostaddr, port, application_name, keepalives, keepalives_idle, keepalives_interval, keepalives_count, sslmode, sslcompression, sslcert, sslkey, sslrootcert, sslcrl, requirepeer, krbsrvname, drivername, url, querytimeout, jarfile, maxheapsize, use_remote_estimate, fdw_startup_cost, fdw_tuple_cost, updatable
 
